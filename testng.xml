@@ -3,9 +3,7 @@
 
 <suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/ASUS/Documents/automateTApps/BPSel7/cucumberjvm-selenium-class1">
     <classes>
-        <class name="BP7_Selenium_TestCase.Authentication.AUTH02_N_Invalid_Login_BlankUsernamePassword"></class>
-        <class name="BP7_Selenium_TestCase.Authentication.AUTH03_N_Invalid_Login_BlankUsername"></class>
-        <class name="BP7_Selenium_TestCase.Authentication.AUTH04_N_Invalid_Login_BlankPasword"></class>
+
 
     </classes>
 

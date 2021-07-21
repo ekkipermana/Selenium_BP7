@@ -3,7 +3,7 @@ package BP7_Selenium_TestCase.Authentication;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AUTH05_N_Invalid_Login_WrongPassword extends Authentication_Page {
+public class AUTH05_N_Login_WrongPassword extends Authentication_Page {
 
     //Login with valid username but wrong password
     @Test

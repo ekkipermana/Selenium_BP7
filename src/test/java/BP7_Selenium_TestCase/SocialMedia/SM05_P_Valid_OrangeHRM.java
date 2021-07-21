@@ -3,7 +3,7 @@ package BP7_Selenium_TestCase.SocialMedia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SM05_Valid_OrangeHRM extends SocialMedia_Page {
+public class SM05_P_Valid_OrangeHRM extends SocialMedia_Page {
 
     //Open for OrangeHRM Link
     @Test

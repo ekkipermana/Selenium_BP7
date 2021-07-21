@@ -3,15 +3,15 @@ package BP7_Selenium_TestCase.Authentication;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AUTH06_N_Invalid_Login_WrongUsername extends Authentication_Page {
+public class AUTH09_N_Login_BehindSpaceUsername extends Authentication_Page {
 
-    //Login with wrong username but valid password
+    //Login with add space in behind of username
     @Test
-    public void Login_AUTH06_N_Invalid_Login_WrongUsername() throws InterruptedException {
-        System.out.println("Login with wrong username but valid password");
+    public void Login_AUTH09_N_Invalid_Login_BehindSpaceUsername() throws InterruptedException {
+        System.out.println("Login with add space in behind of username");
 
-        //Input wrong Username
-        Auth.inputUsername("Okeee");
+        //Input wrong Username adding space in behind of username
+        Auth.inputUsername("Admin ");
         Thread.sleep(1000);
 
         //Input valid Password

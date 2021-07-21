@@ -10,7 +10,7 @@ public class AUTH10_P_Valid_ForgotPassword extends Authentication_Page {
         Thread.sleep(1000);
 
         //Click Forgot Password
-        Auth.ButtonForgotPassword();t();
+        Auth.ButtonForgotPassword();
         Thread.sleep(1000);
 
         //Input Valid username

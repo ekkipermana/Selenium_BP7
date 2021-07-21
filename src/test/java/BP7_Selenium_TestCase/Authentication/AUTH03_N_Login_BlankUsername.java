@@ -3,7 +3,7 @@ package BP7_Selenium_TestCase.Authentication;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AUTH03_N_Invalid_Login_BlankUsername extends Authentication_Page {
+public class AUTH03_N_Login_BlankUsername extends Authentication_Page {
 
     //Login with empty username but valid password
     @Test

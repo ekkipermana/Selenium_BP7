@@ -2,7 +2,7 @@ package BP7_Selenium_TestCase.Authentication;
 
 import org.testng.annotations.Test;
 
-public class AUTH11_N_Invalid_ForgotPassword_BlankUsername extends Authentication_Page {
+public class AUTH11_N_ForgotPassword_BlankUsername extends Authentication_Page {
 
     //Invalid Forgot Password, blank username
     @Test

@@ -3,7 +3,7 @@ package BP7_Selenium_TestCase.Authentication;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AUTH04_N_Invalid_Login_BlankPasword extends Authentication_Page {
+public class AUTH04_N_Login_BlankPasword extends Authentication_Page {
 
     //Login with valid password but blank password
     @Test
