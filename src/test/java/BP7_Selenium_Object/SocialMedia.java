@@ -15,34 +15,36 @@ public class SocialMedia {
 
     /////SOCIAL_MEDIA_URL/////
 
-    //  Locator and method for Linkedin button
-    By BtnLinkedin = By.cssSelector("img[alt='LinkedIn OrangeHRM group']");
-    public void clickBtnLinkedin() {
-        driver.findElement(BtnLinkedin).click();
+    // Linkedin button
+    By LinkedIn_Link = By.cssSelector("img[alt='LinkedIn OrangeHRM group']");
+    public void ClickLinkedIn() {
+        driver.findElement(LinkedIn_Link).click();
+
     }
 
-    //  Locator and method for Facebook button
-    By BtnFacebook = By.cssSelector("img[alt='OrangeHRM on Facebook']");
-    public void clickBtnFacebook() {
-        driver.findElement(BtnFacebook).click();
+    //  Facebook button
+    By Facebook_Link = By.cssSelector("img[alt='OrangeHRM on Facebook']");
+    public void ClickFacebook() {
+        driver.findElement(Facebook_Link).click();
     }
 
-    //  Locator and method for Twitter button
-    By BtnTwitter = By.cssSelector("img[alt='OrangeHRM on twitter']");
-    public void clickBtnTwitter() {
-        driver.findElement(BtnTwitter).click();
+    //  Twitter button
+    By Twitter_Link = By.cssSelector("img[alt='OrangeHRM on twitter']");
+    public void ClickTwitter () {
+        driver.findElement(Twitter_Link).click();
+
     }
 
-    //  Locator and method for Youtube button
-    By BtnYoutube = By.cssSelector("img[alt='OrangeHRM on youtube']");
-    public void clickBtnYoutube() {
-        driver.findElement(BtnYoutube).click();
+    //  Youtube button
+    By Youtube_Link = By.cssSelector("img[alt='OrangeHRM on youtube']");
+    public void ClickYouTube() {
+        driver.findElement(Youtube_Link).click();
     }
 
-    //  Locator and method for OrangeHRM hyperlink
-    By BtnOrangeHRM = By.linkText("OrangeHRM, Inc");
-    public void clickBtnOrangeHRM() {
-        driver.findElement(BtnOrangeHRM).click();
+    //  OrangeHRM LinkURL
+    By OrangeHRM_Link = By.linkText("OrangeHRM, Inc");
+    public void ClickLinkOrangeHRM() {
+        driver.findElement(OrangeHRM_Link).click();
     }
 
 }

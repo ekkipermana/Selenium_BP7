@@ -1,15 +1,15 @@
 package BP7_Selenium_TestCase;
 
-import java.io.File;
-import java.io.IOException;
+import org.testng.log4testng.Logger;
+
 import java.util.Properties;
 
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.PasswordAuthentication;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.*;
 import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.Message;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
@@ -19,77 +19,93 @@ public class Mail {
 
     public static void main(String[] args) {
 
-        // Recipient's email ID needs to be mentioned.
-        String to = "toaddress@gmail.com";
+        // Create object of Property file
+        Properties props = new Properties();
 
-        // Sender's email ID needs to be mentioned
-        String from = "fromaddress@gmail.com";
+        // this will set host of server- you can change based on your requirement
+        props.put("mail.smtp.host", "smtp.mailtrap.io");
 
-        // Assuming you are sending email from through gmails smtp
-        String host = "smtp.gmail.com";
+        // set the port of socket factory
+        props.put("mail.smtp.socketFactory.port", "2525");
 
-        // Get system properties
-        Properties properties = System.getProperties();
+        // set socket factory
+        props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
 
-        // Setup mail server
-        properties.put("mail.smtp.host", host);
-        properties.put("mail.smtp.port", "465");
-        properties.put("mail.smtp.ssl.enable", "true");
-        properties.put("mail.smtp.auth", "true");
+        // set the authentication to true
+        props.put("mail.smtp.auth", "true");
 
-        // Get the Session object.// and pass
-        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+        // set the port of SMTP server
+        props.put("mail.smtp.port", "2525");
 
-            protected PasswordAuthentication getPasswordAuthentication() {
+        // This will handle the complete authentication
+        Session session = Session.getDefaultInstance(props,
 
-                return new PasswordAuthentication("cekautomated12@gmail.com", "12345@@@aA");
+                new javax.mail.Authenticator() {
 
-            }
+                    protected PasswordAuthentication getPasswordAuthentication() {
 
-        });
-        //session.setDebug(true);
+                        return new PasswordAuthentication("12230bf37979a3", "84ee631f1bcb64");
+
+                    }
+
+                });
+
         try {
-            // Create a default MimeMessage object.
-            MimeMessage message = new MimeMessage(session);
 
-            // Set From: header field of the header.
-            message.setFrom(new InternetAddress(from));
+            // Create object of MimeMessage class
+            Message message = new MimeMessage(session);
 
-            // Set To: header field of the header.
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+            // Set the from address
+            message.setFrom(new InternetAddress("ekki.permana66@gmail.com"));
 
-            // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            // Set the recipient address
+            message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("SekolahQABPA7@gmail.com"));
 
+            // Add the subject link
+            message.setSubject("Testing Subject");
+
+            // Create object to add multimedia type content
+            BodyPart messageBodyPart1 = new MimeBodyPart();
+
+            // Set the body of email
+            messageBodyPart1.setText("Sending a Mail");
+
+            // Create another object to add another content
+            MimeBodyPart messageBodyPart2 = new MimeBodyPart();
+
+            // Mention the file which you want to send
+            String filename = "test-output/emailable-report.html";
+
+            // Create data source and pass the filename
+            DataSource source = new FileDataSource(filename);
+
+            // set the handler
+            messageBodyPart2.setDataHandler(new DataHandler(source));
+
+            // set the file
+            messageBodyPart2.setFileName(filename);
+
+            // Create object of MimeMultipart class
             Multipart multipart = new MimeMultipart();
 
-            MimeBodyPart attachmentPart = new MimeBodyPart();
+            // add body part 1
+            multipart.addBodyPart(messageBodyPart2);
 
-            MimeBodyPart textPart = new MimeBodyPart();
+            // add body part 2
+            multipart.addBodyPart(messageBodyPart1);
 
-            try {
-
-                File f =new File("H:\\pepipost_tutorials\\javaemail1.PNG");
-
-                attachmentPart.attachFile(f);
-                textPart.setText("This is text");
-                multipart.addBodyPart(textPart);
-                multipart.addBodyPart(attachmentPart);
-
-            } catch (IOException e) {
-
-                e.printStackTrace();
-
-            }
-
+            // set the content
             message.setContent(multipart);
 
-            System.out.println("sending...");
-            // Send message
+            // finally send the email
             Transport.send(message);
-            System.out.println("Sent message successfully....");
-        } catch (MessagingException mex) {
-            mex.printStackTrace();
+
+            System.out.println("=====Email Sent=====");
+
+        } catch (MessagingException e) {
+
+            throw new RuntimeException(e);
+
         }
 
     }

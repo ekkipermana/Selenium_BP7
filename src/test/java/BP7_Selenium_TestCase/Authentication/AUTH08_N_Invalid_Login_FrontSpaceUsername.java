@@ -3,7 +3,7 @@ package BP7_Selenium_TestCase.Authentication;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AUTH08_N_Invalid_Login_FrontSpaceUsername extends Call_PageObject_Browser {
+public class AUTH08_N_Invalid_Login_FrontSpaceUsername extends Authentication_Page {
 
     //Login with add space in front of username
     @Test
@@ -19,7 +19,7 @@ public class AUTH08_N_Invalid_Login_FrontSpaceUsername extends Call_PageObject_B
         Thread.sleep(1000);
 
         //Click button login
-        Auth.clickBtnLogin();
+        Auth.ButtonLogin();
         Thread.sleep(1000);
 
         //Verify error message

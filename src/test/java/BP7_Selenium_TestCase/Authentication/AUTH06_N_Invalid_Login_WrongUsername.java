@@ -3,7 +3,7 @@ package BP7_Selenium_TestCase.Authentication;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AUTH06_N_Invalid_Login_WrongUsername extends Call_PageObject_Browser  {
+public class AUTH06_N_Invalid_Login_WrongUsername extends Authentication_Page {
 
     //Login with wrong username but valid password
     @Test
@@ -19,7 +19,7 @@ public class AUTH06_N_Invalid_Login_WrongUsername extends Call_PageObject_Browse
         Thread.sleep(1000);
 
         //Click button login
-        Auth.clickBtnLogin();
+        Auth.ButtonLogin();
         Thread.sleep(1000);
 
         //Verify error message

@@ -2,7 +2,7 @@ package BP7_Selenium_TestCase.Authentication;
 
 import org.testng.annotations.Test;
 
-public class AUTH11_N_Invalid_ForgotPassword_BlankUsername extends Call_PageObject_Browser {
+public class AUTH11_N_Invalid_ForgotPassword_BlankUsername extends Authentication_Page {
 
     //Invalid Forgot Password, blank username
     @Test
@@ -11,15 +11,15 @@ public class AUTH11_N_Invalid_ForgotPassword_BlankUsername extends Call_PageObje
         Thread.sleep(1000);
 
         //Click Forgot Password
-        Auth.clickBtnForgotPass();
+        Auth.ButtonForgotPassword();
         Thread.sleep(1000);
 
         //Input Blank username
-        Auth.inputUserForgot("");
+        Auth.inputUsernameForgot("");
         Thread.sleep(1000);
 
         //Click button Reset Password
-        Auth.clickBtnReset();
+        Auth.ButtonReset();
         Thread.sleep(2000);
 
         //Verify message

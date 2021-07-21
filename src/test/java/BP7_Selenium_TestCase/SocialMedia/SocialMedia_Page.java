@@ -1,14 +1,14 @@
-package BP7_Selenium_TestCase.Authentication;
+package BP7_Selenium_TestCase.SocialMedia;
 
+import BP7_Selenium_Object.Authentication;
+import BP7_Selenium_Object.SocialMedia;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import BP7_Selenium_Object.Authentication;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
 
-public class Call_PageObject_Browser {
+public class SocialMedia_Page {
     static WebDriver driver = new ChromeDriver();
-    Authentication Auth = new Authentication(driver);
+    SocialMedia SM = new SocialMedia(driver);
 
     @BeforeTest
     public void init() throws InterruptedException {
@@ -17,8 +17,5 @@ public class Call_PageObject_Browser {
         driver.manage().window().maximize();
         Thread.sleep(2000);
 
-        }
-
     }
-
-
+}

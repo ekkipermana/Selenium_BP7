@@ -3,7 +3,7 @@ package BP7_Selenium_TestCase.Authentication;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AUTH02_N_Invalid_Login_BlankUsernamePassword extends Call_PageObject_Browser {
+public class AUTH02_N_Invalid_Login_BlankUsernamePassword extends Authentication_Page {
 
     //Login with empty username and empty password
     @Test
@@ -19,7 +19,7 @@ public class AUTH02_N_Invalid_Login_BlankUsernamePassword extends Call_PageObjec
         Thread.sleep(1000);
 
         //Click button login
-        Auth.clickBtnLogin();
+        Auth.ButtonLogin();
         Thread.sleep(1000);
 
         //Verify error message
