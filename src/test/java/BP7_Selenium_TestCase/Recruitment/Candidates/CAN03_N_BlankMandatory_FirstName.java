@@ -67,7 +67,9 @@ public class CAN03_N_BlankMandatory_FirstName extends Candidates_Page {
         Rec.ButtonSaveCandidates();
         Thread.sleep(1000);
         Assert.assertTrue(driver.getPageSource().contains("Required"));
-        Thread.sleep(1000);
+        Thread.sleep(2000);
+        driver.get("http://qa.cilsy.id/symfony/web/index.php/recruitment/addCandidate");
+        driver.navigate().refresh();
 
     }
 }

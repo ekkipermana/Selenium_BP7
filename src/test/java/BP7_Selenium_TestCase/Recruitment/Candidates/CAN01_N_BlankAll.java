@@ -56,7 +56,7 @@ public class CAN01_N_BlankAll extends Candidates_Page{
         //Input Comments
         Rec.CandidatesInputComments("");
         Thread.sleep(1000);
-//        //Pick Date
+        //        //Pick Date
 //        Rec.CandidatesPickDate();
 //        Thread.sleep(1000);
 //        Select startMonth = new Select(driver.findElement(By.className("  ui-datepicker-current-day")));
@@ -67,7 +67,9 @@ public class CAN01_N_BlankAll extends Candidates_Page{
         Rec.ButtonSaveCandidates();
         Thread.sleep(1000);
         Assert.assertTrue(driver.getPageSource().contains("Required"));
-        Thread.sleep(1000);
+        Thread.sleep(2000);
+        driver.get("http://qa.cilsy.id/symfony/web/index.php/recruitment/addCandidate");
+        driver.navigate().refresh();
 
 
     }

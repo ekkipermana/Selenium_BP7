@@ -1,5 +1,6 @@
 package BP7_Selenium_TestCase.Authentication;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 public class AUTH10_P_Valid_ForgotPassword extends Authentication_Page {
 
@@ -19,10 +20,9 @@ public class AUTH10_P_Valid_ForgotPassword extends Authentication_Page {
 
         //Click button Reset Password
         Auth.ButtonReset();
-        Thread.sleep(2000);
 
         //Verify message
-        // Assert.assertTrue(driver.getPageSource().contains("Please contact HR admin in order to reset the password"));
-        //Thread.sleep(2000);
+        Assert.assertTrue(driver.getPageSource().contains("Password reset email could not be sent"));
+        Thread.sleep(1000);
     }
 }

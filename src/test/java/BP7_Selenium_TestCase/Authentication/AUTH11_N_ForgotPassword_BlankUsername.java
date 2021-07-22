@@ -1,5 +1,6 @@
 package BP7_Selenium_TestCase.Authentication;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AUTH11_N_ForgotPassword_BlankUsername extends Authentication_Page {
@@ -20,10 +21,9 @@ public class AUTH11_N_ForgotPassword_BlankUsername extends Authentication_Page {
 
         //Click button Reset Password
         Auth.ButtonReset();
-        Thread.sleep(2000);
 
         //Verify message
-        // Assert.assertTrue(driver.getPageSource().contains("Please contact HR admin in order to reset the password"));
-        //Thread.sleep(2000);
+        Assert.assertTrue(driver.getPageSource().contains("Could not find a user with given details"));
+
     }
 }

@@ -67,9 +67,9 @@ public class CAN07_P_Valid_Add_Candidate extends Candidates_Page {
 
         //Button Save Candidates
         Rec.ButtonSaveCandidates();
+        Assert.assertTrue(driver.getPageSource().contains("Successfully Saved"));
         Thread.sleep(1000);
-        Assert.assertTrue(driver.getPageSource().contains("Candidate's History"));
-        Thread.sleep(1000);
+        //Back to List
 
 
 

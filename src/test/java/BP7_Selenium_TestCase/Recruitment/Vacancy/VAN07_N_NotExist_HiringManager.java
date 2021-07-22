@@ -5,11 +5,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class VAN01_N_Invalid_BlankAll extends Vacancy_Page {
-
+public class VAN07_N_NotExist_HiringManager extends Vacancy_Page {
     @Test
-    public void Vacancies_VAN01_N_Invalid_BlankAll() throws InterruptedException {
-        System.out.println("Add Vacancies invalid with blank data");
+    public void Vacancies_VAN07_N_NotExist_HiringManager() throws InterruptedException {
+        System.out.println("Add Vacancies with blank Not exist Hiring Managers");
 //        //Input valid Username
 //        Auth.inputUsername("Admin");
 //        Thread.sleep(1000);
@@ -33,32 +32,31 @@ public class VAN01_N_Invalid_BlankAll extends Vacancy_Page {
 
 
         // Pick Mandator Job Title
-//        Rec.VacancyPickJobTittle();
-//        Select vacanciespicksTittleJob = new Select(driver.findElement(By.id("addJobVacancy_jobTitle")));
-//        //candidatespick.selectByVisibleText("QA Engineer Batch 7");
-//        vacanciespicksTittleJob.selectByValue("2");
-//        Thread.sleep(1000);
-
+        Rec.VacancyPickJobTittle();
+        Select vacanciespicksTittleJob = new Select(driver.findElement(By.id("addJobVacancy_jobTitle")));
+        //candidatespick.selectByVisibleText("QA Engineer Batch 7");
+        vacanciespicksTittleJob.selectByValue("2");
+        Thread.sleep(1000);
         //Input Mandatory Vacany Name
-        Rec.VacancyInputName("");
+        Rec.VacancyInputName("QAQAQA");
         Thread.sleep(1000);
         //Input Mandatory Hiring Manager
-        Rec.VacancyInputManager("");
+        Rec.VacancyInputManager("Ekki");
         Thread.sleep(1000);
         //Input Numbers of positions
-        Rec.VacancyInputNumberPositions("");
+        Rec.VacancyInputNumberPositions("2");
         Thread.sleep(1000);
         //Input Numbers of positions
-        Rec.VacancyInputDescriptions("");
+        Rec.VacancyInputDescriptions("SekolahQA Batch7");
         Thread.sleep(1000);
 
         //Click Button Save
         Rec.VacancyButtonSave();
         Thread.sleep(1000);
-        Assert.assertTrue(driver.getPageSource().contains("Required"));
-        Assert.assertTrue(driver.getPageSource().contains("Invalid"));
+        Assert.assertTrue(driver.getPageSource().contains("Already exists"));
+        //Clear Refresh Page
         Thread.sleep(2000);
         driver.get("http://qa.cilsy.id/symfony/web/index.php/recruitment/addJobVacancy");
         driver.navigate().refresh();
     }
-    }
+}

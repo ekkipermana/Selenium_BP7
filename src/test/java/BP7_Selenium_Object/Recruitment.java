@@ -87,6 +87,17 @@ public class Recruitment {
 
     ///////VACANCIES////////
     // Pick Mandatory Job Title
+    // Click Menu Vacancies
+    By ClickVancancies = By.id("menu_recruitment_viewJobVacancy");
+    public void Vacancies() {
+        driver.findElement(ClickVancancies).click();
+    }
+    // Click Button AddCandidates
+    By VacanciesAddButton = By.id("btnAdd");
+    public void ButtonAddVacancies() {
+        driver.findElement(VacanciesAddButton).click();
+    }
+    // Pick Mandatory Job Title
     By PickJobTittleVacancy = By.id("addJobVacancy_jobTitle");
     public void VacancyPickJobTittle () {
         driver.findElement(PickJobTittleVacancy).click();
