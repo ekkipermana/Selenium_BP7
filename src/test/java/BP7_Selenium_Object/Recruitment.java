@@ -132,4 +132,7 @@ public class Recruitment {
     public void VacancyButtonBack () {
         driver.findElement(ButtonBackVacancy).click();
     }
+//    // Upoload
+//    By UploadFile = By.id("addCandidate_resume");
+//    UploadFile.sendKeys("test-output/emailable-report.html");
 }

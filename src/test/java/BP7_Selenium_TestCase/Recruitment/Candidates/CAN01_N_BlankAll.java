@@ -70,6 +70,7 @@ public class CAN01_N_BlankAll extends Candidates_Page{
         Thread.sleep(2000);
         driver.get("http://qa.cilsy.id/symfony/web/index.php/recruitment/addCandidate");
         driver.navigate().refresh();
+        Thread.sleep(1000);
 
 
     }

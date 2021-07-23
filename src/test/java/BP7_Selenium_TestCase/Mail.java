@@ -62,13 +62,15 @@ public class Mail {
             message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("SekolahQABPA7@gmail.com"));
 
             // Add the subject link
-            message.setSubject("Testing Subject");
+            message.setSubject("Report Selenium OrangeHRM BP7 Ekki Permana 23 Juli 2021");
 
             // Create object to add multimedia type content
             BodyPart messageBodyPart1 = new MimeBodyPart();
 
             // Set the body of email
-            messageBodyPart1.setText("Sending a Mail");
+            messageBodyPart1.setText("Report SekolahQA BP7");
+
+
 
             // Create another object to add another content
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();

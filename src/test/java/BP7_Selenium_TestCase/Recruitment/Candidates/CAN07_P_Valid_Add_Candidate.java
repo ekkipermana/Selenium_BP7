@@ -23,28 +23,28 @@ public class CAN07_P_Valid_Add_Candidate extends Candidates_Page {
 //        Thread.sleep(2000);
 //
         // Open menu Recruitment
-        Rec.MenuRecruitment();
-        Thread.sleep(1000);
-        // Open SubMenu Candidates
-        Rec.Candidates();
-        Thread.sleep(1000);
-        // Click Add Button
-        Rec.ButtonAddCandidates();
-        Thread.sleep(1000);
-        //Input Mandatory First name
-        Rec.CandidatesInputFirstName("Cilsy");
+//        Rec.MenuRecruitment();
+//        Thread.sleep(1000);
+//        // Open SubMenu Candidates
+//        Rec.Candidates();
+//        Thread.sleep(1000);
+//        // Click Add Button
+//        Rec.ButtonAddCandidates();
+//        Thread.sleep(1000);
+//        //Input Mandatory First name
+        Rec.CandidatesInputFirstName("Demo");
         Thread.sleep(1000);
         //Input Middle Name
-        Rec.CandidatesInputMiddleName("Digital");
+        Rec.CandidatesInputMiddleName("BP");
         Thread.sleep(1000);
         //Input Mandatory Last Name
-        Rec.CandidatesInputLastName("School");
+        Rec.CandidatesInputLastName("QA7");
         Thread.sleep(1000);
         //Input Mandatory Email
-        Rec.CandidatesInputEmail("ekki.permana@gmail.com");
+        Rec.CandidatesInputEmail("ekki.permanaa@gmail.com");
         Thread.sleep(1000);
         //Input Contact
-        Rec.CandidatesInputContact("085293765760");
+        Rec.CandidatesInputContact("0852937657600");
         Thread.sleep(1000);
         //Pick Job Vacancy
         Rec.CandidatesPickJobVac();
@@ -52,6 +52,9 @@ public class CAN07_P_Valid_Add_Candidate extends Candidates_Page {
         Select candidatespicksJob = new Select(driver.findElement(By.id("addCandidate_vacancy")));
         //candidatespick.selectByVisibleText("TesQA1");
         candidatespicksJob.selectByValue("3");
+
+//        Rec.fileInput = driver.findElement(By.id("addCandidate_resume"));
+//        fileInput.sendKeys("/path/to/file.jpg");
         //Input Keywords
         Rec.CandidatesInputKeywords("CilsyQAA");
         Thread.sleep(1000);
@@ -68,6 +71,8 @@ public class CAN07_P_Valid_Add_Candidate extends Candidates_Page {
         //Button Save Candidates
         Rec.ButtonSaveCandidates();
         Assert.assertTrue(driver.getPageSource().contains("Successfully Saved"));
+        Thread.sleep(1000);
+        Rec.CandidtatesButtonBack();
         Thread.sleep(1000);
         //Back to List
 

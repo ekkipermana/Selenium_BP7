@@ -38,7 +38,7 @@ public class VAN09_P_Valid_Add_Vacancy extends Vacancy_Page {
         vacanciespicksTittleJob.selectByValue("2");
         Thread.sleep(1000);
         //Input Mandatory Vacany Name
-        Rec.VacancyInputName("QA Automation Engineersss");
+        Rec.VacancyInputName("QA Automation Engin");
         Thread.sleep(1000);
         //Input Mandatory Hiring Manager
         Rec.VacancyInputManager("Karyawan Teladan");

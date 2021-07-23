@@ -3,8 +3,8 @@
 
 <suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/ASUS/Documents/automateTApps/BPSel7/cucumberjvm-selenium-class1">
     <classes>
-
-
+        <class name="BP7_Selenium_TestCase.Recruitment.Candidates.CAN02_N_BlankMandatory_All"></class>
+        <class name="BP7_Selenium_TestCase.Recruitment.Candidates.CAN07_P_Valid_Add_Candidate"></class>
     </classes>
 
 

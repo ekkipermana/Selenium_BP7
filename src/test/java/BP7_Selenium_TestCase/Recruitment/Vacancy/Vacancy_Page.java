@@ -2,6 +2,7 @@ package BP7_Selenium_TestCase.Recruitment.Vacancy;
 
 import BP7_Selenium_Object.Authentication;
 import BP7_Selenium_Object.Recruitment;
+import BP7_Selenium_Object.SocialMedia;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ public class Vacancy_Page {
     static WebDriver driver = new ChromeDriver();
     Recruitment Rec = new Recruitment(driver);
     Authentication Auth = new Authentication(driver);
+    SocialMedia SM = new SocialMedia(driver);
 
     @BeforeTest
     public void init() throws InterruptedException {

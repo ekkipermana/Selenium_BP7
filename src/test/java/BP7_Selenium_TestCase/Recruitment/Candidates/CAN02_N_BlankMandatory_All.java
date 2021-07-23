@@ -21,14 +21,14 @@ public class CAN02_N_BlankMandatory_All extends Candidates_Page {
 //        Thread.sleep(2000);
 //
         // Open menu Recruitment
-        Rec.MenuRecruitment();
-        Thread.sleep(1000);
-        // Open SubMenu Candidates
-        Rec.Candidates();
-        Thread.sleep(1000);
-        // Click Add Button
-        Rec.ButtonAddCandidates();
-        Thread.sleep(1000);
+//        Rec.MenuRecruitment();
+//        Thread.sleep(1000);
+//        // Open SubMenu Candidates
+//        Rec.Candidates();
+//        Thread.sleep(1000);
+//        // Click Add Button
+//        Rec.ButtonAddCandidates();
+//        Thread.sleep(1000);
         //Input Mandatory First name
         Rec.CandidatesInputFirstName("");
         Thread.sleep(1000);
@@ -70,6 +70,7 @@ public class CAN02_N_BlankMandatory_All extends Candidates_Page {
         Thread.sleep(2000);
         driver.get("http://qa.cilsy.id/symfony/web/index.php/recruitment/addCandidate");
         driver.navigate().refresh();
+        Thread.sleep(1000);
 
     }
 }
